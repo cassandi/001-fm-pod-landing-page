@@ -15,10 +15,12 @@ desktop: 1440 px
 :root {
   --light-purple: #c2cbe5;
   --purple: #5a668a;
+  --light-green: #b3ffe2;
   --green: #54e6af;
   --light-navy: #2c344b;
   --navy: #121725;
   --white: #ffffff;
+  --warn: #fb3e3e;
 }
 
 /*
@@ -34,11 +36,16 @@ desktop: 1440 px
 
 html {
   font-family: "Chivo", sans-serif;
-  font-size: 12px;
 }
 
 body {
   height: 100vh;
+}
+
+input,
+label,
+button {
+  font: inherit;
 }
 
 /*
@@ -82,8 +89,8 @@ body {
 .headline {
   color: var(--green);
   font-weight: 100;
-  font-size: 2em;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 38px;
   text-transform: uppercase;
   margin: 0;
   text-align: center;
@@ -100,6 +107,7 @@ body {
   line-height: 24px;
   text-align: center;
   opacity: 50%;
+  margin-top: 16px;
 }
 
 .icon--group {
@@ -113,7 +121,6 @@ body {
 }
 
 .email--input {
-  font: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
@@ -121,28 +128,45 @@ body {
   background-color: var(--light-navy);
   margin-top: 48px;
   border: none;
-  padding: 9px 0 9px 32px;
+  padding: 8px 0 8px 32px;
   border-radius: 28px;
-  width: 100%;
+  width: 327px;
 }
 
 .email--input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.email--error-msg {
+  display: block;
+  visibility: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 0 8px 32px;
+  font-weight: bold;
+}
+
+.email--input:invalid + .email--error-msg {
+  visibility: visible;
+  color: var(--warn);
+}
+
 .email--btn {
-  font: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   color: var(--navy);
   background-color: var(--green);
-  margin-top: 16px;
   border: none;
   border-radius: 28px;
   width: 100%;
   padding: 9px 0;
   margin-bottom: 94px;
+}
+
+.email--btn:hover {
+  background-color: var(--light-green);
+  cursor: pointer;
 }
 
 /*
@@ -202,6 +226,7 @@ body {
   .form {
     order: 2;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
   }
 
@@ -209,6 +234,10 @@ body {
     width: 427px;
     margin: 0;
     padding: 14px 0 14px 32px;
+  }
+
+  .email--error-msg {
+    order: 3;
   }
 
   .email--btn {
