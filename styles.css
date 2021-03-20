@@ -6,6 +6,12 @@ desktop: 1440 px
 
 */
 
+/*
+
+    VARIABLES
+
+*/
+
 :root {
   --light-purple: #c2cbe5;
   --purple: #5a668a;
@@ -14,6 +20,12 @@ desktop: 1440 px
   --navy: #121725;
   --white: #ffffff;
 }
+
+/*
+
+    RESET
+
+*/
 
 html {
   font-family: "Chivo", sans-serif;
@@ -25,22 +37,42 @@ body {
   margin: 0;
 }
 
+input {
+  box-sizing: border-box;
+}
+
+/*
+
+    MOBILE
+
+*/
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 0 2rem;
-}
-
-.bg--image {
-  min-height: 100%;
   background: url("./assets/mobile/image-host.jpg"), rgba(18, 23, 37, 0.9);
   background-size: cover;
   background-blend-mode: multiply;
+  min-height: 100%;
 }
 
-.bg--dots {
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 328px;
+}
+
+.img--musician {
+  display: none;
+}
+
+.img--dots {
+  display: none;
 }
 
 .logo {
@@ -67,6 +99,7 @@ body {
   font-size: 1.25rem;
   line-height: 2rem;
   text-align: center;
+  opacity: 50%;
 }
 
 .icon--group {
@@ -89,14 +122,13 @@ body {
   background-color: var(--purple);
   margin-top: 4rem;
   border: none;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0 0.75rem 2.67rem;
   border-radius: 2.33rem;
   width: 100%;
 }
 
 .email--input::placeholder {
   color: var(--white);
-  padding-left: 2.67rem;
 }
 
 .email--btn {
@@ -112,4 +144,87 @@ body {
   width: 100%;
   padding: 0.75rem 0;
   margin-bottom: 94px;
+}
+
+/*
+
+    TABLET
+
+*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    align-items: flex-start;
+    background: none;
+    background-color: var(--navy);
+    padding: 0 3.33rem;
+  }
+
+  .logo {
+    margin: 0;
+    margin-top: 4.17rem;
+  }
+
+  .main-content {
+    margin-top: 12.67rem;
+    width: 635px;
+    position: relative;
+    z-index: 2;
+    background-color: var(--navy);
+  }
+
+  .headline {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: unset;
+    margin-top: 7.75rem;
+  }
+
+  .content {
+    font-size: 1.5rem;
+    line-height: 2.33rem;
+    width: 445px;
+    text-align: unset;
+    margin-top: 2.67rem;
+  }
+
+  .img--musician {
+    display: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .form {
+    order: 2;
+    display: flex;
+    margin-top: 3.33rem;
+  }
+
+  .email--input {
+    width: 427px;
+    margin: 0;
+    padding: 1.17rem 0 1.17rem 2.67rem;
+  }
+
+  .email--btn {
+    margin: 0;
+    width: 162px;
+    margin: 5px;
+    margin-left: -167px;
+  }
+
+  .icon--group {
+    order: 3;
+    width: 536px;
+    height: 25px;
+    margin-top: 5.83rem;
+  }
+
+  .img--dots {
+    display: unset;
+    position: absolute;
+    bottom: 0;
+    left: 2.5rem;
+  }
 }
