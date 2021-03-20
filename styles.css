@@ -71,7 +71,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 328px;
+  /* max-width: 328px; */
 }
 
 .img--musician {
@@ -151,6 +151,10 @@ button {
   color: var(--warn);
 }
 
+.email--input:required + .email--input:not(:focus) {
+  visibility: hidden;
+}
+
 .email--btn {
   font-weight: 700;
   font-size: 16px;
@@ -191,6 +195,7 @@ button {
   .main-content {
     margin-top: 152px;
     min-width: 635px;
+    max-width: 723px;
     position: relative;
     z-index: 2;
     background-color: var(--navy);
