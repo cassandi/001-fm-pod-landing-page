@@ -71,7 +71,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  /* max-width: 328px; */
+  max-width: 328px;
 }
 
 .img--musician {
@@ -146,13 +146,9 @@ button {
   font-weight: bold;
 }
 
-.email--input:invalid + .email--error-msg {
+.email--input:focus:invalid + .email--error-msg {
   visibility: visible;
   color: var(--warn);
-}
-
-.email--input:required + .email--input:not(:focus) {
-  visibility: hidden;
 }
 
 .email--btn {
@@ -233,6 +229,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
+    max-width: 427px;
   }
 
   .email--input {

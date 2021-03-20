@@ -18,8 +18,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- See it live on [CodeSandbox](https://codesandbox.io/s/001-fm-pod-landing-page-qy1k1)
+- See it live on [Netlify](https://jolly-clarke-cbd114.netlify.app/)
+- Play with the code on [CodeSandbox](https://codesandbox.io/s/001-fm-pod-landing-page-qy1k1)
 
 ## My process
 
