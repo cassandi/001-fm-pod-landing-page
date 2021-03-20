@@ -26,3 +26,7 @@ Users should be able to:
 I started by laying out the HTML structure, CSS classes, and basic styles for the mobile mockup. From there, I was able to add styles for the tablet and desktop mockups, refining my base mobile styles as I went. I really like this approach as a quick way to get going.
 
 Instead of using JS for input validation, I opted for built-in validation provided by native HTML inputs using `required` and `type="email"`. I styled the error message according to the input state by using the `:invalid` pseudo-class. Using `visibility: hidden` instead of `display: none` for the error message prevented layout shift on state change. The element with `visibility: hidden` still exists in the DOM, unlike an element with the property `display: none`.
+
+## Resources
+
+- I used [Media Modifier](https://mediamodifier.com/) to create an image of my screenshots in different devices.
