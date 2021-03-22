@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0224ad41-a8d3-40f6-8ec0-3c389d343f5b/deploy-status)](https://app.netlify.com/sites/jolly-clarke-cbd114/deploys)
 
-# Frontend Mentor - Pod request access landing page solution
+# Frontend Mentor - HTML and CSS only landing page with simple form
 
 ![Image of website on mobile, tablet, and laptop.](./assets/001-all-devices.png)
 
